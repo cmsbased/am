@@ -1,0 +1,9 @@
+modules/addons/hexa_extras/version.txt
+templates/hexa/src/skins/prepros.config
+templates/hexa/src/skins/prepros.config
+node_modules
+.vscode
+package-lock.json
+templates/orderforms/flowcart7
+templates/orderforms/flowslider7
+yarn-error.log

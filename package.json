@@ -1,0 +1,18 @@
+{
+  "name": "am",
+  "version": "1.0.0",
+  "private": true,
+  "license": "",
+  "description": "This is a package.json file.",
+  "scripts": {
+    "build": "npx tailwindcss -i am.css -o templates/am/css/am.css",
+    "build:dark": "npx tailwindcss -i am.css -o templates/am-dark/css/am.css",
+    "build:all": "npx tailwindcss -i am.css -o templates/am/css/am.css && npx tailwindcss -i am.css -o templates/am-dark/css/am.css"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.7"
+  }
+}

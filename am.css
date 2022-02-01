@@ -1,0 +1,258 @@
+@tailwind components; 
+
+/** Fonts **/
+body { @apply font-['futura-pt'] }
+h1, h2, h3, h4, h5, h5 { @apply font-['futura-pt'] }
+
+/** Core  **/
+body { @apply text-gray-600 dark:text-gray-400;}
+input[type="password"] { @apply font-sans text-base leading-tight }
+a, .btn-link  { @apply text-primary-700; transition: color .2s ease,background .2s ease,border .2s ease,padding .2s ease }
+.primary-bg-color { @apply bg-white dark:bg-gray-990 }
+section#main-body { @apply text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-950 pt-2 pb-16 }
+.client-home-cards small { @apply text-gray-400 dark:text-gray-600 }
+.text-muted { @apply !text-gray-300 dark:!text-gray-700 }
+.border-left { @apply border-l !border-gray-200 dark:!border-gray-800 }
+.modal-localisation .modal-content { @apply bg-gray-990 }
+.modal-localisation .item-selector .item { @apply border-0 }
+
+/** Forms **/
+.form-group.text-center { @apply !text-left }
+.form-group.text-center .btn { @apply !px-4 !py-3 }
+
+/** Breadcrumb **/
+.breadcrumb-item.active { @apply text-gray-900 dark:text-gray-100 }
+.master-breadcrumb { @apply bg-gray-100 dark:bg-gray-950 }
+.master-breadcrumb .breadcrumb { @apply text-xs pt-3 pb-1  }
+.breadcrumb { @apply bg-transparent border-0 }
+
+
+/** Project Management **/
+div.projectmanagement div.infobar { @apply dark:bg-gray-990 }
+div.projectmanagement div.infobar table td, div.projectmanagement div.infobar table th {  @apply dark:text-gray-500 dark:border-0 }
+div.projectmanagement span.taskdue { @apply dark:bg-black }
+
+/** Header **/
+header.header { @apply bg-gray-50 dark:bg-gray-990 }
+header.header .main-navbar-wrapper .navbar-collapse { @apply py-5 px-1 }
+#Primary_Navbar-Home  a { @apply pl-0 ml-0 }
+header.header .logo-img { @apply w-40 }
+header.header  svg { @apply w-40 text-gray-600 dark:text-gray-400 }
+header.header .navbar a.navbar-brand { @apply pt-1 md:pt-5 pb-1 px-0 }
+header.header .navbar a.navbar-brand svg { @apply !text-gray-990 dark:!text-gray-50 }
+header.header .navbar a { @apply dark:text-gray-200 text-gray-800 hover:no-underline hover:bg-transparent hover:text-primary-600 pl-4 pr-4 text-base m-0 py-2 block md:py-0 }
+header.header .toolbar .nav-link { @apply border-0 }
+#Secondary_Navbar-Account { @apply !hidden md:!block  }
+header.header .dropdown-item.active, header.header .dropdown-item:active { @apply dark:bg-gray-800 bg-gray-200 }
+li#Secondary_Navbar-Account ul.dropdown-menu.dropdown-menu-right.show { @apply absolute }
+.dropdown-toggle::after { vertical-align: 0.1em!important; }
+.dropdown-menu { @apply bg-white dark:bg-black }
+.dropdown-item { @apply hover:bg-gray-50 focus:bg-gray-50 dark:hover:bg-gray-950 dark:focus:bg-gray-950 }
+.dropdown-divider { border-top: 1px solid rgb(221 221 221 / var(--tw-bg-opacity)); }
+.dark .dropdown-divider { border-top: 1px solid rgb(9 10 15 / var(--tw-bg-opacity)); }
+header.header .search { @apply border-0 }
+
+/** Tiles **/
+.tiles .tile i { @apply text-sm }
+.tiles .tile:hover i { @apply text-sm }
+
+/** Buttons **/
+.btn { @apply  text-xs font-bold tracking-wider text-black no-underline uppercase rounded-sm dark:text-primary-100 active:shadow-none }
+.btn i { @apply opacity-75 px-2 }
+.btn i.fa-fw { @apply w-auto }
+.btn-link { @apply normal-case font-normal tracking-normal}
+.btn-sm { @apply !text-xs py-2 px-3 }
+.btn-xs { @apply !text-xs }
+.btn-lg { @apply !text-xs }
+.btn-default { @apply dark:text-gray-100 dark:hover:text-white bg-white dark:bg-gray-990 border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-300 active:bg-gray-300 active:focus:bg-gray-300 } 
+.btn-primary { @apply text-white dark:text-primary-100 hover:text-white bg-primary-600 border border-transparent hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-300 active:bg-primary-300 active:focus:bg-primary-300 }
+.btn-primary[disabled] { @apply hover:bg-primary-500; }
+.btn-outline-primary { @apply text-primary-600 dark:text-primary-600 hover:text-primary-500 bg-transparent border border-primary-600 hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-300 active:bg-primary-300 active:focus:bg-primary-300 }
+.btn-success { @apply  text-white hover:text-white bg-green-600 border border-transparent hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:bg-green-300 active:bg-green-300 active:focus:bg-green-300 }
+.client-home-cards .card .btn-success { @apply  text-white hover:text-white bg-primary-600 border border-transparent hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-300 active:bg-primary-300 active:focus:bg-primary-300 }
+.card-sidebar .btn-success, .card-sidebar .btn-success:hover { @apply text-white hover:text-white bg-primary-600 border border-transparent hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-300 active:bg-primary-300 active:focus:bg-primary-300 }
+.card-sidebar .card-footer .btn-block { @apply inline-block w-auto }
+.btn-return-to-admin { @apply !text-sm !bg-white dark:!bg-black shadow border-0 !normal-case font-normal tracking-normal !pb-2 !pt-1 }
+#btnGroupDrop1, .setBulkAction { @apply text-sm font-normal normal-case }
+.input-group-lg>.custom-select, .input-group-lg>.form-control, .input-group-lg>.input-group-append>.btn, .input-group-lg>.input-group-append>.input-group-text, .input-group-lg>.input-group-prepend>.btn, .input-group-lg>.input-group-prepend>.input-group-text { @apply text-sm }
+.home-domain-search .input-group-wrapper .btn {  @apply p-3 }
+
+/** Cards **/
+.card { @apply bg-white dark:bg-gray-990 }
+.card-header { @apply bg-white dark:bg-gray-990  }
+.client-home-cards .card { @apply shadow border-0 text-base bg-white dark:bg-gray-990 pb-5 }
+.client-home-cards .card-header { @apply py-5 px-5 bg-white dark:bg-gray-990 }
+.client-home-cards .card-title { @apply  font-normal text-gray-800 dark:text-gray-200 }
+.client-home-cards .list-group { @apply !border-t border-solid !border-b-0 border-gray-100 dark:border-gray-900 }
+.client-home-cards .list-group .list-group-item { @apply py-5 px-5 dark:bg-gray-990 bg-white border-gray-100 dark:border-gray-900 }
+.client-home-cards .card .label { @apply !bg-transparent text-gray-500 inline-flex }
+.client-home-cards .card .label:before { @apply relative w-2 h-2 mr-1 bg-gray-500 rounded-full; content:''; margin-top: 1px; }
+.client-home-cards .card .label:before { background: var(--use-status-color) }
+.client-home-cards .card .label-success:before { @apply bg-green-500 }
+.client-home-cards .card .status-pending:before { @apply bg-yellow-500 }
+.client-home-cards .card .list-group .list-group-item:last-of-type { border-bottom: 0!important; }
+.card-body, .list-group-item-action { @apply dark:text-gray-500 text-gray-700 }
+.dark .card>.card-header+.list-group { @apply !border-t; border-top: 1px solid rgb(27 29 36 / var(--tw-border-opacity)) !important; }
+.client-home-cards .card .list-group { @apply relative max-h-64 }
+.ps__scrollbar-y-rail { z-index:1000; }
+
+/** Sidebar **/
+.card-sidebar .card-header { @apply px-2 }
+.sidebar .list-group-item, .list-group-item  { @apply dark:bg-gray-990 bg-white border-gray-100 dark:border-gray-900 dark:hover:bg-gray-900 hover:bg-gray-100 dark:focus:bg-gray-900 focus:bg-gray-100  }
+.sidebar .list-group-item.active { @apply dark:bg-gray-900 bg-gray-300  }
+
+.card-sidebar .card-header, .card-sidebar .card-footer { @apply bg-transparent } 
+.sidebar .card-sidebar .card-minimise { @apply text-gray-300 }
+.card-sidebar .card-title>i { @apply text-gray-300 text-xs hidden }
+.sidebar .card-sidebar i.card-minimise { @apply text-gray-300 block } 
+.sidebar .card-body strong {@apply font-normal dark:text-gray-100 text-gray-900 }
+.sidebar .list-group-item.active, .sidebar .list-group-item.active:hover, .sidebar .list-group-item.active:focus { @apply dark:border-gray-800 hover:bg-gray-400 dark:hover:bg-gray-700 border-gray-200 }
+
+/** Tables **/
+.dataTables_wrapper table.table-list thead th.sorting_asc, .dataTables_wrapper table.table-list thead th.sorting_desc { @apply bg-white dark:bg-gray-990 }
+.dataTables_wrapper table.table-list thead th { @apply !border-b }
+.dataTables_wrapper table.table-list td.text-center img { @apply w-4 }
+.dataTables_info { @apply text-gray-300 dark:text-gray-700}
+.dataTables_filter { @apply relative }
+.dataTables_filter::before { @apply absolute text-base text-gray-300 top-2 left-5 dark:text-gray-700;
+    content: "\f002";
+    font-family: Font Awesome\ 5 Pro;
+ }
+ tr.masspay-total td { @apply dark:bg-black }
+
+/** Forms and Form Elements **/
+#order-standard_cart .form-control, .form-control { @apply text-gray-400 placeholder-gray-400 border-gray-200 rounded-none dark:placeholder-gray-800 dark:focus:placeholder-gray-900 dark:bg-black dark:border-gray-950 bg-gray-10 focus:placeholder-gray-300; } 
+#order-standard_cart .form-control:focus { @apply shadow-none outline-none border-primary-500 dark:border-primary-300; }
+.form-control.StripeElement { @apply bg-gray-50; }
+input[type=checkbox], input[type=radio] { @apply mr-2; }
+.checkbox label, .radio label  { @apply pb-1; }
+.help-block { @apply text-gray-500; }
+input.input_search:focus { @apply text-gray-500 dark:bg-black bg-gray-10; }
+#pwstrengthbox { @apply text-gray-500 dark:bg-gray-900 bg-gray-10; } 
+.form-mydetails, .form-addcontact, .form-contacts, .form-domaindetails  { @apply pt-10 pl-5; }
+.input-group-addon { @apply text-gray-400 bg-gray-100 border-0 dark:bg-black; }
+label { @apply text-xs font-bold leading-6 tracking-widest text-gray-800 uppercase dark:text-gray-200; }
+.input[type=checkbox]:not(.input--switch) { @apply bg-gray-200 border-gray-500 dark:border-gray-600 dark:bg-gray-700 focus:outline-none; }
+.input[type=checkbox]:not(.input--switch):checked { @apply bg-primary-300 border-primary-500; }
+.col-form-label { @apply text-xs  }
+.form-check label { @apply font-normal tracking-normal normal-case }
+.input-group-text { @apply bg-gray-100 dark:bg-gray-950 dark:border-gray-900 }
+.input-group .btn-reveal-pw { @apply dark:border-gray-900 }
+
+.md-editor { @apply dark:!border-gray-990 } 
+.md-editor .md-footer, .md-editor>.md-header { @apply dark:bg-black }
+.md-editor .btn-primary.active, .md-editor .btn-primary.focus { @apply text-gray-400 dark:bg-gray-700 bg-gray-10; }
+.md-editor > .btn-toolbar, .md-editor > textarea.markdown-editor, .md-editor > .md-preview { @apply dark:!bg-black dark:!border-0 }
+
+.custom-file { height: 2rem; }
+.custom-file-label { @apply dark:bg-black dark:border-gray-800 mb-0}
+.custom-file-label::after { @apply dark:bg-gray-950 }
+
+/** Table **/
+.table { @apply dark:bg-gray-900 bg-gray-50 dark:text-gray-500 text-gray-700 } 
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th { @apply px-5 pt-5 pb-3 m-0 leading-5 border-t dark:border-gray-900 border-gray-10 focus:outline-none; } 
+.table > thead > tr > th { @apply px-5 pt-3 pb-3 text-xs tracking-wider text-gray-600 border-b border-gray-100 dark:text-gray-400 dark:border-gray-900 dark:bg-gray-950 bg-gray-10; } 
+.table-hover>tbody>tr:hover { @apply bg-gray-100 dark:bg-gray-850; } 
+.table-striped>tbody>tr:nth-of-type(odd) { @apply dark:bg-gray-800 bg-gray-10; }
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before,
+table.dtr-inline.collapsed>thead>tr>th:first-child .btn-table-collapse.expanded { @apply shadow-none bg-gray-950; }
+table.dataTable>tbody>tr.child ul li { @apply border-gray-700; }
+.ssl img { @apply w-3 h-3 mr-1 align-baseline; }
+.table-list > tbody > tr > td { @apply  dark:bg-gray-990 bg-gray-50  }
+.dataTables_wrapper table.table-list { @apply border-0 }
+.dataTables_wrapper .dataTables_filter label .form-control { @apply bg-white dark:bg-black bg-none  }
+
+/** Badges **/
+.sidebar .list-group-item .badge { @apply bg-white dark:bg-black text-gray-400 dark:text-gray-600 }
+
+/** Pagination **/
+.page-item.disabled .page-link { @apply dark:bg-gray-900 bg-gray-100 dark:border-gray-990 border-gray-200}
+
+/** Announcements **/
+.announcements .announcement article { @apply bg-transparent border-l-0 px-0 py-5 }
+.announcements .announcement h1 { @apply text-xl }
+.bg-light { @apply !bg-gray-10 dark:!bg-gray-990 }
+
+/** Home Screen **/
+.home-domain-search { @apply bg-white dark:!bg-black }
+.home-domain-search .input-group-wrapper { @apply bg-white dark:!bg-black border-gray-200 dark:border-gray-800 }
+.action-icon-btns a { @apply bg-white dark:bg-black text-gray-800 dark:text-gray-200 }
+.action-icon-btns a .ico-container i { @apply text-gray-300 dark:text-gray-500 }
+
+/** Ticket **/
+.view-ticket .posted-by { @apply bg-gray-50 dark:bg-gray-950 text-gray-600 dark:text-gray-400  }
+.view-ticket .attachment-list li figure { @apply dark:bg-black }
+.view-ticket .attachment-list li span { @apply dark:border-black p-0 }
+.view-ticket .attachment-list li span .caption { @apply text-center }
+.view-ticket .card-body, .view-ticket .mc-promo-manage .content, .mc-promo-manage .view-ticket .content, .view-ticket .mc-promo-login .content, .mc-promo-login .view-ticket .content { @apply dark:border-gray-800 }
+.view-ticket .attachments { @apply dark:border-black }
+
+/** Cart **/
+.domain-pricing .tld-pricing-header div:nth-child(odd) { @apply dark:bg-transparent }
+#order-standard_cart .btn i { @apply px-0 }
+.domain-promo-box { @apply dark:bg-gray-990 dark:text-gray-400 }
+#order-standard_cart .products .product { @apply dark:bg-black }
+#order-standard_cart .products .product header { @apply dark:bg-black dark:text-gray-200 }
+#order-standard_cart .products .product header span { @apply dark:text-gray-200  }
+#order-standard_cart .products .product { @apply dark:border-gray-950 }
+#order-standard_cart .domain-selection-options .option-selected { @apply dark:bg-black dark:text-gray-200 } 
+#order-standard_cart .domain-selection-options .option  { @apply dark:bg-black dark:text-gray-200 }
+#order-standard_cart label, #order-standard_cart p.domain-renewal-desc { @apply dark:text-gray-200 text-gray-800 }
+#order-standard_cart .summary-container { @apply dark:bg-black }
+#order-standard_cart .order-summary  { @apply dark:bg-black dark:border-b-0 }
+#order-standard_cart .product-info { @apply dark:bg-black dark:border-0 } 
+#order-standard_cart .sub-heading { @apply dark:border-gray-800 }
+#order-standard_cart .panel-addon .panel-body { @apply dark:bg-black bg-white }
+#order-standard_cart .order-summary .subtotal { @apply dark:border-gray-800 }
+#order-standard_cart .order-summary .btn-continue-shopping { @apply dark:text-primary-400 }
+#order-standard_cart .view-cart-items .item   { @apply dark:bg-black dark:border-b-0 }
+#order-standard_cart .view-cart-items .item:nth-child(even)  { @apply dark:bg-gray-990 }
+#order-standard_cart .view-cart-tabs .tab-content { @apply dark:bg-black }
+#order-standard_cart .view-cart-tabs .nav-tabs>li.active>a  { @apply dark:bg-black }
+#order-standard_cart .nav-tabs { @apply dark:border-gray-800 }
+#order-standard_cart .nav-tabs .nav-item.show .nav-link, #order-standard_cart .nav-tabs .nav-link.active { @apply dark:border-0 }
+#order-standard_cart .account-select-container div.account.active { @apply dark:bg-gray-990 }
+#order-standard_cart .account-select-container div.account { @apply dark:bg-black  dark:border-gray-990 }
+#order-standard_cart .account-select-container { @apply dark:border-r-0 }
+#order-standard_cart .cc-input-container { @apply dark:bg-transparent dark:border-gray-900 }
+
+/** Product Details **/
+div.product-details div.product-icon {  @apply bg-gray-50 dark:bg-gray-950 }
+.product-details-tab-container { @apply dark:!bg-gray-990 }
+.nav-tabs { @apply border-gray-200 dark:border-gray-800 hover:border-gray-100 hover:dark:border-gray-900  }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { @apply bg-white dark:bg-gray-990 dark:text-gray-400 text-gray-600  }
+div.product-details-tab-container { @apply border-gray-100 dark:border-gray-800 }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { @apply border-gray-200 dark:border-gray-800 }
+.dark .nav-tabs .nav-item.show .nav-link, .dark .nav-tabs .nav-link.active {  border-bottom: 1px solid rgb(9 10 15)!important;  }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {  border-bottom: 1px solid rgb(250 250 251)!important;  }
+.responsive-tabs-sm .nav-item a:hover { @apply bg-gray-200 dark:bg-gray-800 }
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover { @apply border-gray-100 dark:border-gray-900 }
+
+/** Alerts **/
+.alert-info { @apply text-blue-800 bg-blue-200 border-blue-100 dark:bg-blue-900 dark:text-blue-100 dark:border-blue-900; a { @apply underline; } 
+
+ .btn, .button, a { @apply text-blue-500; } 
+ .btn, .button { @apply bg-blue-300 border; } 
+ .alert-watermark .fas { @apply text-black opacity-75; } 
+ .close { @apply text-gray-500; } 
+ }
+.alert-success { @apply text-green-800 bg-green-200 border-green-100 dark:bg-green-900 dark:text-green-100 dark:border-green-900; a { @apply underline; } 
+ .btn, .button, a { @apply text-green-500; } 
+ .btn, .button { @apply bg-green-300 border; } 
+ .alert-watermark .fas { @apply text-black opacity-75; } 
+ .close { @apply text-gray-500; } 
+ }
+.alert-danger { @apply text-red-800 bg-red-200 border-red-100 dark:bg-red-900 dark:text-red-100 dark:border-red-900; a { @apply underline; } 
+ .btn, .button, a { @apply text-red-500; } 
+ .btn, .button { @apply bg-red-300 border; } 
+ .alert-watermark .fas { @apply text-black opacity-75; } 
+ .close { @apply text-gray-500; } 
+ }
+.alert-warning { @apply text-yellow-900 bg-yellow-200 border-yellow-100 dark:bg-yellow-800 dark:text-yellow-100 dark:border-yellow-900; a { @apply underline; } 
+ .btn, .button, a { @apply text-yellow-500; } 
+ .btn, .button { @apply bg-yellow-300 border; } 
+ .alert-watermark .fas { @apply text-black opacity-75; } 
+ .close { @apply text-gray-500; } 
+ }
+
+@tailwind utilities;
