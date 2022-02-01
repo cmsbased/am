@@ -4,12 +4,12 @@ module.exports = {
   darkMode: 'class',
   important: true,
     content: [
-      "templates/twenty-one-plus/includes/*.tpl",
-      "templates/twenty-one-plus/*.tpl",
-      "templates/twenty-one-plus/js/*.js",
-      "templates/twenty-one-plus-dark/includes/*.tpl",
-      "templates/twenty-one-plus-dark/*.tpl",
-      "templates/twenty-one-plus-dark/js/*.js",
+      "templates/am/includes/*.tpl",
+      "templates/am/*.tpl",
+      "templates/am/js/*.js",
+      "templates/am-dark/includes/*.tpl",
+      "templates/am-dark/*.tpl",
+      "templates/am-dark/js/*.js",
     ],
     safelist: [
       'xl:ml-6',
@@ -24,7 +24,19 @@ module.exports = {
     extend: {
       backgroundColor: ['active'],
       colors: {
-        primary: colors.indigo,
+        primary: {
+          "900": "rgb(188,37,130)",
+          "850": "rgb(188,37,130)",
+          "800": "rgb(188,37,130)",
+          "700": "rgb(188,37,130)",
+          "600": "rgb(188,37,130)",
+          "500": "rgb(188,37,130)",
+          "400": "rgb(188,37,130)",
+          "300": "rgb(188,37,130)",
+          "200": "rgb(188,37,130)",
+          "100": "rgb(188,37,130)",
+          "50": "rgb(188,37,130)",
+        },
         gray: {
           "990": "rgb(9,10,15)",
           "950": "rgb(19,20,25)",

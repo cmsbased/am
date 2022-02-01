@@ -4,9 +4,15 @@
 <link href="{assetPath file='all.min.css'}?v={$versionHash}" rel="stylesheet">
 <link href="{assetPath file='bootstrap.css'}?v={$versionHash}" rel="stylesheet">
 <link href="{assetPath file='theme.css'}?v={$versionHash}" rel="stylesheet">
-<link href="{assetPath file='twenty-one-plus.css'}?v={$versionHash}" rel="stylesheet">
+<link href="{assetPath file='am.css'}?v={$versionHash}" rel="stylesheet">
 <link href="{$WEB_ROOT}/assets/css/fontawesome-all.min.css" rel="stylesheet">
 <link href="{$WEB_ROOT}/templates/{$template}/assets/css/perfect-scrollbar.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+
 {assetExists file="custom.css"}
 <link href="{$__assetPath__}" rel="stylesheet">
 {/assetExists}
