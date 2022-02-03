@@ -6,7 +6,7 @@
             Achieving <br />
             <span class="tracking-[0.5em]">your Dream</span>
         </div>
-        <div class="px-10 py-10 bg-white rounded-md shadow-xl sm:px-36">
+        <div class="px-10 py-10 bg-white rounded-md shadow-xl dark:bg-gray-900 sm:px-36">
             <div class="mb-8 text-center">
                 <h6 class="tracking-[0.5em] uppercase mb-5">{lang key='myaccount'}</h6>
                 <div>

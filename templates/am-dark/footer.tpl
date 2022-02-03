@@ -10,41 +10,6 @@
                     </div>
                     </section>
 
-                    <footer class="text-gray-600 bg-white dark:bg-gray-990 dark:text-gray-400">
-                        <div class="container">
-                            <div class="px-3 py-16 mx-auto md:flex md:items-center md:justify-between">
-                                <div class="flex justify-center space-x-6 md:order-2">
-                                    <ul>
-                                        {include file="$template/includes/social-accounts.tpl"}
-                                        {if $languagechangeenabled && count($locales) > 1 || $currencies}
-                                            <li class="inline-block ml-5">
-                                                <a class="flex items-center space-x-2" data-toggle="modal"
-                                                    data-target="#modalChooseLanguage">
-                                                    <div class="flex-shrink-0">
-                                                        <div
-                                                            class="iti-flag {if $activeLocale.countryCode === 'GB'}us{else}{$activeLocale.countryCode|lower}{/if}">
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="text-sm font-medium text-gray-900 uppercase dark:text-gray-100">
-                                                        {$activeLocale.localisedName}
-                                                        /
-                                                        {$activeCurrency.prefix}
-                                                        {$activeCurrency.code}
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        {/if}
-                                    </ul>
-                                </div>
-                                <div class="md:order-1">
-                                    <p class="text-sm text-center text-gray-400">
-                                        {lang key="copyrightFooterNotice" year=$date_year company=$companyname}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
 
                     <div id="fullpage-overlay" class="w-hidden">
                         <div class="outer-wrapper">
