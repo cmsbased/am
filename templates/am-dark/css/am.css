@@ -1,9 +1,5 @@
 /** Fonts **/
 
-body {
-  font-family: 'Raleway';
-}
-
 h1, h2, h3, h4, h5, h5 {
   font-family: 'Raleway';
 }
@@ -11,6 +7,9 @@ h1, h2, h3, h4, h5, h5 {
 /** Core  **/
 
 body {
+  background-image: url('/templates/am/img/bg.jpg');
+  background-size: cover;
+  font-family: 'Raleway';
   --tw-text-opacity: 1;
   color: rgb(27 29 36 / var(--tw-text-opacity));
 }
@@ -42,19 +41,15 @@ a, .btn-link {
 }
 
 section#main-body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 236 240 / var(--tw-bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 4rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
   --tw-text-opacity: 1;
-  color: rgb(78 82 103 / var(--tw-text-opacity));
+  color: rgb(27 29 36 / var(--tw-text-opacity));
 }
 
 .dark section#main-body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 20 25 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(135 140 164 / var(--tw-text-opacity));
+  color: rgb(235 236 240 / var(--tw-text-opacity));
 }
 
 .client-home-cards small {
@@ -2095,6 +2090,22 @@ div.product-details-tab-container {
   margin-top: 1rem !important;
 }
 
+.mt-8 {
+  margin-top: 2rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
 .ml-5 {
   margin-left: 1.25rem !important;
 }
@@ -2115,10 +2126,6 @@ div.product-details-tab-container {
   margin-left: 0.125rem !important;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem !important;
-}
-
 .mr-auto {
   margin-right: auto !important;
 }
@@ -2129,18 +2136,6 @@ div.product-details-tab-container {
 
 .ml-2 {
   margin-left: 0.5rem !important;
-}
-
-.mt-8 {
-  margin-top: 2rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 2rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1rem !important;
 }
 
 .inline-block {
@@ -2181,6 +2176,10 @@ div.product-details-tab-container {
 
 .w-5 {
   width: 1.25rem !important;
+}
+
+.w-full {
+  width: 100% !important;
 }
 
 .flex-shrink-0 {
@@ -2254,12 +2253,17 @@ div.product-details-tab-container {
   border-radius: 0.125rem !important;
 }
 
+.border-2 {
+  border-width: 2px !important;
+}
+
 .border {
   border-width: 1px !important;
 }
 
-.border-2 {
-  border-width: 2px !important;
+.border-black {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
 }
 
 .border-transparent {
@@ -2269,11 +2273,6 @@ div.product-details-tab-container {
 .border-gray-400 {
   --tw-border-opacity: 1 !important;
   border-color: rgb(135 140 164 / var(--tw-border-opacity)) !important;
-}
-
-.border-black {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
 }
 
 .bg-gray-200 {
@@ -2298,10 +2297,6 @@ div.product-details-tab-container {
 .bg-gray-950 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(19 20 25 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-\[url\(\'\/templates\/am\/img\/bg\.jpg\'\)\] {
-  background-image: url('/templates/am/img/bg.jpg') !important;
 }
 
 .bg-\[url\(\'\/templates\/am-dark\/img\/bg-dark\.jpg\'\)\] {
@@ -2330,6 +2325,21 @@ div.product-details-tab-container {
   padding-bottom: 0.5rem !important;
 }
 
+.py-10 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+.px-10 {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
 .px-3 {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
@@ -2340,19 +2350,13 @@ div.product-details-tab-container {
   padding-bottom: 4rem !important;
 }
 
-.py-10 {
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
-}
-
 .px-36 {
   padding-left: 9rem !important;
   padding-right: 9rem !important;
 }
 
-.px-2 {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
+.pr-3 {
+  padding-right: 0.75rem !important;
 }
 
 .pb-0\.5 {
@@ -2410,6 +2414,11 @@ div.product-details-tab-container {
   line-height: 1rem !important;
 }
 
+.text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
 .text-sm {
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -2420,11 +2429,6 @@ div.product-details-tab-container {
   line-height: 2.5rem !important;
 }
 
-.text-lg {
-  font-size: 1.125rem !important;
-  line-height: 1.75rem !important;
-}
-
 .font-normal {
   font-weight: 400 !important;
 }
@@ -2433,20 +2437,16 @@ div.product-details-tab-container {
   font-weight: 600 !important;
 }
 
-.font-medium {
-  font-weight: 500 !important;
-}
-
 .font-bold {
   font-weight: 700 !important;
 }
 
-.uppercase {
-  text-transform: uppercase !important;
+.font-medium {
+  font-weight: 500 !important;
 }
 
-.tracking-wider {
-  letter-spacing: 0.05em !important;
+.uppercase {
+  text-transform: uppercase !important;
 }
 
 .tracking-\[0\.75em\] {
@@ -2455,6 +2455,10 @@ div.product-details-tab-container {
 
 .tracking-\[0\.5em\] {
   letter-spacing: 0.5em !important;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em !important;
 }
 
 .text-white {
@@ -2472,6 +2476,16 @@ div.product-details-tab-container {
   color: rgb(188 37 130 / var(--tw-text-opacity)) !important;
 }
 
+.text-primary-700 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(188 37 130 / var(--tw-text-opacity)) !important;
+}
+
+.text-black {
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1 !important;
   color: rgb(78 82 103 / var(--tw-text-opacity)) !important;
@@ -2487,19 +2501,9 @@ div.product-details-tab-container {
   color: rgb(95 100 125 / var(--tw-text-opacity)) !important;
 }
 
-.text-black {
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1 !important;
   color: rgb(61 65 81 / var(--tw-text-opacity)) !important;
-}
-
-.text-primary-700 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(188 37 130 / var(--tw-text-opacity)) !important;
 }
 
 .no-underline {
@@ -2652,6 +2656,20 @@ div.product-details-tab-container {
 
   .sm\:max-w-3xl {
     max-width: 48rem !important;
+  }
+
+  .sm\:px-36 {
+    padding-left: 9rem !important;
+    padding-right: 9rem !important;
+  }
+
+  .sm\:pr-0 {
+    padding-right: 0px !important;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
   }
 }
 

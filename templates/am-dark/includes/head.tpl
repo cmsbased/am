@@ -29,11 +29,6 @@
 </script>
 <script src="{assetPath file='scripts.min.js'}?v={$versionHash}"></script>
 <script src="{$WEB_ROOT}/templates/{$template}/assets/js/perfect-scrollbar.jquery.min.js"></script>
-<script>
-    jQuery(function() {
-        jQuery('.client-home-cards .card .list-group').perfectScrollbar();
-    });
-</script>
 
 {if $templatefile == "viewticket" && !$loggedin}
     <meta name="robots" content="noindex" />

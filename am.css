@@ -1,15 +1,14 @@
 @tailwind components; 
 
 /** Fonts **/
-body { @apply font-['Raleway'] }
 h1, h2, h3, h4, h5, h5 { @apply font-['Raleway'] }
 
 /** Core  **/
-body { @apply text-gray-900 dark:text-gray-300;}
+body { @apply text-gray-900 dark:text-gray-300 font-['Raleway'] bg-cover bg-[url('/templates/am/img/bg.jpg')];}
 input[type="password"] { @apply font-sans leading-tight }
 a, .btn-link  { @apply text-primary-700; transition: color .2s ease,background .2s ease,border .2s ease,padding .2s ease }
 .primary-bg-color { @apply bg-white dark:bg-gray-990 }
-section#main-body { @apply text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-950 pt-2 pb-16 }
+section#main-body { @apply text-gray-900 dark:text-gray-100 pt-0 pb-0 }
 .client-home-cards small { @apply text-gray-400 dark:text-gray-600 }
 .text-muted { @apply !text-gray-300 dark:!text-gray-700 }
 .border-left { @apply border-l !border-gray-200 dark:!border-gray-800 }
