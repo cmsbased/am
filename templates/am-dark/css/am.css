@@ -2385,6 +2385,11 @@ div.product-details-tab-container {
   background-color: rgb(27 29 36 / var(--tw-bg-opacity)) !important;
 }
 
+.dark .dark\:text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .dark .dark\:text-black {
   --tw-text-opacity: 1 !important;
   color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
