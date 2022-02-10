@@ -24,7 +24,6 @@
 .integrated-header nav.navbar {
   width: 100%;
   min-height: initial;
-  display: inline-block;
   background: #010101;
   border-radius: 0;
   border: none !important;
@@ -548,7 +547,7 @@
   fill: #fff;
 }
 .p-global-nav-bar__item.is-current::before {
-  background-image: url(../img/hamburger-menu/arrow-menu-2.png);
+  background-image: url(../assets/img/hamburger-menu/arrow-menu-2.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: 1px;
@@ -2155,4 +2154,34 @@
   .integrated-header header {
     padding: 10px 0 0;
   }
+}
+
+/** Misc **/
+
+.integrated-header header .toolbar {
+  flex-direction: row;
+}
+
+.page-clientareahome .integrated-header nav.navbar ul.navbar-nav li:before {
+  background: #ffffff;
+}
+
+h4.account-info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 14px;
+  height: 26px;
+  background: #bc2582;
+}
+
+h4.nav-billing:before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 26px;
+  height: 14px;
+  background: #bc2582;
 }

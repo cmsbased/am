@@ -28,7 +28,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="pr-3 secondrymenu sm:pr-0 dark:text-white">
+            <div class="pr-3 secondary-menu sm:pr-0 dark:text-white">
                 {if $loggedin}
                     <ul class="nav navbar-nav navbar-avatar flip">
                         {include file="$template/includes/secondary_navbar.tpl" navbar=$secondaryNavbar}</ul>

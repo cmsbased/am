@@ -10,13 +10,10 @@
             <li class="fa_cube {if $client === null}active {/if}"><a href="clientarea.php"><i
                         class="fas fa-cube"></i></a></li>
         </ul>
-
-
-
     </nav>
 
-    <header>
-        <div class="container">
+    <header class="pb-5 bg-white shadow-lg">
+        <div class="container flex flex-wrap items-center justify-between">
             <div class="logo">
                 <a href="clientarea.php">
                     <svg class="dark:text-white" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -28,107 +25,86 @@
                     </svg>
                 </a>
             </div>
-            <div class="pr-3 secondrymenu sm:pr-0">
+
+            <ul class="items-center navbar-nav toolbar">
                 {if $loggedin}
-                    <ul class="nav navbar-nav navbar-avatar flip">
+                    <li class="ml-3 xl:ml-6 nav-item">
+                        <a class="flex items-center p-2 -m-2 text-black rounded-full cursor-pointer group hover:text-gray-500 focus:outline-none"
+                            data-toggle="popover" id="accountNotifications" data-placement="bottom">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="flex-shrink-0 w-5 h-5 text-black group-hover:text-gray-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
 
-                        <div class="navbar-header flip hidden-sm hidden-xs" role="navigation">
-                            <ul class="nav navbar-nav flattern-nav">
-                                <li>
-                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                    <ul id="newemail"
-                                        class="pull-right flip dropdown-navbar navbar-status navbar-mail dropdown-menu dropdown-caret dropdown-close">
-                                        {foreach from=$fe_emaillist key=num item=fe_email}
-                                            <li>
-                                                <a href="#"
-                                                    onclick="popupWindow('viewemail.php?id={$fe_email.id}','emlmsg',800,400);return false;">
-                                                    <div class="clearfix">
-                                                        <span class="pull-left flip">
-                                                            <i class="fas fa-fw fa-envelope"></i>
-                                                            {$fe_email.subject|truncate:34:'...'}
-                                                        </span>
-                                                        <span class="pull-right flip">
-                                                            <i class="fas fa-clock"></i> {$fe_email.time}
-                                                        </span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        {/foreach}
-                                        <li class="dropdown-footer">
-                                            <a href="{$WEB_ROOT}/clientarea.php?action=emails">View All Messages <i
-                                                    class="fal fa-fw fa-long-arrow-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="navbar-header flip hidden-sm hidden-xs" role="navigation">
-                            <ul class="nav navbar-nav flattern-nav">
-                                <li>
-                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                        <i class="fas fa-bell"></i>
-                                        <span class="badge noti badge-important">
-                                            {count($clientAlerts)}
-                                        </span>
-                                    </a>
-                                    <ul
-                                        class="pull-right flip dropdown-navbar navbar-status dropdown-menu dropdown-caret dropdown-close">
-                                        <div class="title">{$LANG.notifications}</div>
-                                        <div class="content">
-                                            <ul>
-                                                {foreach $clientAlerts as $alert}
-                                                    <li>
-                                                        <a href="{$alert->getLink()}">
-                                                            <div class="icon"><i
-                                                                    class="fas fa-fw fa-{if $alert->getSeverity() == 'danger'}exclamation-triangle{elseif $alert->getSeverity() == 'warning'}exclamation-circle{elseif $alert->getSeverity() == 'info'}info-square{else}check-circle{/if}"></i>
-                                                            </div>
-                                                            <div class="desc">{$alert->getMessage()}</div>
-                                                        </a>
-                                                    </li>
-                                                {foreachelse}
-                                                    <li class="none">
-                                                        {$LANG.notificationsnone}
-                                                    </li>
-                                                {/foreach}
-                                            </ul>
-                                        </div>
-                                        <div class="footer"> <a
-                                                href="{$WEB_ROOT}/serverstatus.php">{$LANG.networkstatustitle}
-                                                <i class="fal fa-fw fa-long-arrow-right"></i></a></div>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        {if $show_inclientarea != 1 && $showqsl}
-                            {if $filename eq "clientarea" and $smarty.get.action eq ""}
-                                <div class="navbar-header flip hidden-xs" role="navigation">
-                                    <ul class="nav navbar-nav flattern-nav">
-                                        <li>
-                                            <a data-toggle="modal" href="#qsl">
-                                                <span class="glyphicon glyphicon-flash animated bounce"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            {if count($clientAlerts) > 0}
+                                <span
+                                    class="ml-0 text-sm font-bold text-black group-hover:text-gray-600">{count($clientAlerts)}</span>
+                            {else}
+                                <span class="d-sm-none">0</span>
                             {/if}
-                        {/if}
-                        <div class="navbar-header flip hidden-sm hidden-xs" role="navigation">
-                            <ul class="nav navbar-nav flattern-nav">
-                                <li>
-                                    <a href="{$WEB_ROOT}/cart.php?a=view">
-                                        <i class="fas fa-luggage-cart"></i>
-                                        {if $flattern_cartitems}
-                                            <span class="badge badge-important Cart-count">{$flattern_cartitems}</span>
-                                        {/if}
-                                    </a>
-                                </li>
+                        </a>
+                        <div id="accountNotificationsContent" class="w-hidden">
+                            <ul class="client-alerts">
+                                {foreach $clientAlerts as $alert}
+                                    <li>
+                                        <a href="{$alert->getLink()}">
+                                            <i
+                                                class="fas fa-fw fa-{if $alert->getSeverity() == 'danger'}exclamation-circle{elseif $alert->getSeverity() == 'warning'}exclamation-triangle{elseif $alert->getSeverity() == 'info'}info-circle{else}check-circle{/if}"></i>
+                                            <div class="message">{$alert->getMessage()}</div>
+                                        </a>
+                                    </li>
+                                {foreachelse}
+                                    <li class="none">
+                                        {lang key='notificationsnone'}
+                                    </li>
+                                {/foreach}
                             </ul>
                         </div>
-                        <a href="logout.php" class="fa-Logout"><i class="fas fa-sign-out-alt"></i></a>
-                    {/if}
-
+                    </li>
+                {/if}
+                <li class="ml-3 xl:ml-6 nav-item">
+                    {$link_back="systpl=`$template`&amp;"}
+                    <a href="{$currentpagelinkback|replace:$link_back:''}systpl=twenty-one-plus-dark"
+                        class="flex items-center p-2 -m-2 text-black rounded-full group hover:text-gray-500 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="flex-shrink-0 w-5 h-5 text-black group-hover:text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="ml-3 mr-7 xl:ml-6 nav-item">
+                    <a class="flex items-center p-2 -m-2 text-black rounded-full group hover:text-gray-500 focus:outline-none"
+                        href="{$WEB_ROOT}/cart.php?a=view">
+                        <svg class="flex-shrink-0 w-5 h-5 text-black group-hover:text-gray-500"
+                            x-description="Heroicon name: outline/shopping-bag" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span
+                            class="ml-0.5 text-sm font-bold text-black group-hover:text-gray-600">{$cartitemcount}</span>
+                        <span class="sr-only">{lang key="carttitle"}</span>
+                    </a>
+                </li>
+                {if $loggedin}
+                    {include file="$template/includes/navbar.tpl" navbar=$secondaryNavbar rightDrop=true}
+                {/if}
+                <li class="ml-3 xl:ml-6 nav-item d-xl-none">
+                    <button
+                        class="flex items-center p-2 -m-2 text-black rounded-full group hover:text-gray-500 focus:outline-none"
+                        type="button" data-toggle="collapse" data-target="#mainNavbar">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </li>
+                <li class="ml-10">
                     <div class="Menu-icon">
                         <div class="p-hamburger is-mounted is-closed-navi is-leave">
                             <div class="p-hamburger__line p-hamburger__line--01">
@@ -147,10 +123,9 @@
                                 <div class="p-hamburger__line-in p-hamburger__line-in--cross02"></div>
                             </div>
                         </div>
-
                     </div>
-
-            </div>
+                </li>
+            </ul>
         </div>
     </header>
 </div>
