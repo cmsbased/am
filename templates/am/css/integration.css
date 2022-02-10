@@ -2185,3 +2185,7 @@ h4.nav-billing:before {
   height: 14px;
   background: #bc2582;
 }
+
+.page-login section#main-body {
+  padding-top: 0px !important;
+}
