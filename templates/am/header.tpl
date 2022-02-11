@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
     {include file="$template/includes/head.tpl"}
-    <script src='{$WEB_ROOT}/templates/{$template}/assets/js/frontend.min.js'></script>
     <script src='{$WEB_ROOT}/templates/{$template}/assets/js/integration.js'></script>
     <link href="{$WEB_ROOT}/templates/{$template}/css/integration.css" rel="stylesheet">
     {$headoutput}
