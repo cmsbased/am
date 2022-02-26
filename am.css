@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h5 { @apply font-['Raleway'] }
 /** Core  **/
 body { @apply text-gray-900 dark:text-gray-300 font-['Raleway'] bg-cover bg-[url('/templates/am/img/bg.jpg')] dark:bg-[url('/templates/am/img/bg-dark.jpg')];}
 input[type="password"] { @apply font-sans leading-tight }
-a, .btn-link  { @apply text-primary-700; transition: color .2s ease,background .2s ease,border .2s ease,padding .2s ease }
+a, .btn-link, a:hover  { @apply text-primary-700; transition: color .2s ease,background .2s ease,border .2s ease,padding .2s ease }
 .primary-bg-color { @apply bg-white dark:bg-gray-990 }
 section#main-body { @apply text-gray-900 dark:text-gray-100 pt-0 pb-0 }
 .client-home-cards small { @apply text-gray-400 dark:text-gray-600 }
@@ -14,6 +14,11 @@ section#main-body { @apply text-gray-900 dark:text-gray-100 pt-0 pb-0 }
 .border-left { @apply border-l !border-gray-200 dark:!border-gray-800 }
 .modal-localisation .modal-content { @apply bg-gray-990 }
 .modal-localisation .item-selector .item { @apply border-0 }
+
+
+.page-homepage { @apply pt-40; }
+.label-danger { @apply bg-primary-500; }
+
 
 /** Forms **/
 .form-group.text-center { @apply !text-left }
@@ -56,7 +61,7 @@ header.header .search { @apply border-0 }
 .tiles .tile:hover i { @apply text-sm }
 
 /** Buttons **/
-.btn { @apply  text-xs font-bold tracking-wider text-black no-underline uppercase rounded-sm dark:text-primary-100 active:shadow-none }
+.btn { @apply  text-xs font-bold tracking-wider text-black no-underline uppercase rounded-lg dark:text-primary-100 active:shadow-none }
 .btn i { @apply opacity-75 px-2 }
 .btn i.fa-fw { @apply w-auto }
 .btn-link { @apply normal-case font-normal tracking-normal}
@@ -118,6 +123,7 @@ header.header .search { @apply border-0 }
     font-family: Font Awesome\ 5 Pro;
  }
  tr.masspay-total td { @apply dark:bg-black }
+ .dataTables_wrapper table.table-list > tbody > tr > td { @apply bg-white }
 
 /** Forms and Form Elements **/
 #order-standard_cart .form-control, .form-control { @apply text-gray-400 placeholder-gray-400 border-gray-200 rounded-none dark:placeholder-gray-800 dark:focus:placeholder-gray-900 dark:bg-black dark:border-gray-950 bg-gray-10 focus:placeholder-gray-300; } 
@@ -165,7 +171,8 @@ table.dataTable>tbody>tr.child ul li { @apply border-gray-700; }
 .sidebar .list-group-item .badge { @apply bg-white dark:bg-black text-gray-400 dark:text-gray-600 }
 
 /** Pagination **/
-.page-item.disabled .page-link { @apply dark:bg-gray-900 bg-gray-100 dark:border-gray-990 border-gray-200}
+.page-item.disabled .page-link { @apply dark:bg-gray-900 bg-gray-50 dark:border-gray-990 border-gray-200}
+.pagination > .active > .page-link  { @apply !bg-primary-500 !border-primary-500 }
 
 /** Announcements **/
 .announcements .announcement article { @apply bg-transparent border-l-0 px-0 py-5 }

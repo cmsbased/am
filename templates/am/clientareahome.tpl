@@ -1,5 +1,57 @@
 {include file="$template/includes/flashmessage.tpl"}
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#myInvoices')
+            .DataTable({
+                "responsive": true,
+                "dom": '<"listtable"fit>pl',
+                "lengthChange": false,
+                "filter": false,
+                "sort": true,
+                "columnDefs": [{
+                    "orderable": false,
+                    "targets": [
+                        0
+                    ]
+                }],
+                "stateSave": true,
+                "info": false
+            });
+        $('#mySupport')
+            .DataTable({
+                "responsive": true,
+                "dom": '<"listtable"fit>pl',
+                "lengthChange": false,
+                "filter": false,
+                "sort": true,
+                "stateSave": true,
+                "info": false
+            });
+        $(
+                '#myProjects')
+            .DataTable({
+                "responsive": true,
+                "dom": '<"listtable"fit>pl',
+                "lengthChange": false,
+                "filter": false,
+                "sort": true,
+                "stateSave": true,
+                "info": false
+            });
+        $(
+                '#myServices')
+            .DataTable({
+                "responsive": true,
+                "dom": '<"listtable"fit>pl',
+                "lengthChange": false,
+                "filter": false,
+                "sort": true,
+                "stateSave": true,
+                "info": false
+            });
+    });
+</script>
 <div>
     <dl class="grid grid-cols-1 gap-5 mb-10 overflow-hidden md:grid-cols-4">
         <div
@@ -202,6 +254,7 @@
         <h3 class="page-header-2"><span aria-hidden="true" class="icon icon-drawer"></span> <span
                 class="text-lg header-text">{$clientsstats.numdueinvoices} {$LANG.invoicesdue}</span></h3>
         <form method="post" action="{$WEB_ROOT}/clientarea.php?action=masspay">
+
             <table class="min-w-full divide-y divide-gray-100 dark:divide-gray-900" id="myInvoices">
                 <thead class="bg-transparent dark:bg-black">
                     <tr>
@@ -275,8 +328,8 @@
                         <tr>
                             <td colspan="5" class="px-6 py-4 whitespace-nowrap">
                                 <input type="submit" name="masspayselected" value="{$LANG.masspayselected}"
-                                    class="btn btn-outlined btn-sm" />
-                                <a class="btn btn-outlined btn-sm"
+                                    class="btn btn-primary btn-sm" />
+                                <a class="btn btn-primary btn-sm"
                                     href="{$WEB_ROOT}/clientarea.php?action=masspay&amp;all=true">{$LANG.masspayall}</a>
                             </td>
                         </tr>
@@ -367,68 +420,3 @@
         </table>
     </div>
 </div>
-
-
-<div class="client-home-cards">
-    <div class="grid grid-cols-1 gap-8 xl:grid-cols-2 2xl:grid-cols-3">
-        {function name=outputHomePanels}
-            <div menuItemName="{$item->getName()}"
-                class="{if $item->getName() == "Affiliate Program"}panel-affilaite{elseif $item->getName() == "Register a New Domain"}panel-new-domain{elseif $item->getName() == "Recent Support Tickets"}panel-support-tickets{elseif $item->getName() == "Active Products/Services"}panel-products 2xl:col-span-2{/if} card"
-                {if $item->getAttribute('id')} id="{$item->getAttribute('id')}" {/if}>
-                <div class="card-header">
-                    <h3 class="m-0 card-title">
-                        {if $item->getExtra('btn-link') && $item->getExtra('btn-text')}
-                            <div class="float-right">
-                                <a href="{$item->getExtra('btn-link')}"
-                                    class="pb-0.5 pr-0 btn btn-link btn-xs text-primary-600">
-                                    {$item->getExtra('btn-text')}
-                                </a>
-                            </div>
-                        {/if}
-                        {$item->getLabel()}
-                        {if $item->hasBadge()}&nbsp;<span class="badge">{$item->getBadge()}</span>{/if}
-                    </h3>
-                </div>
-                {if $item->hasBodyHtml()}
-                    <div class="card-body">
-                        {$item->getBodyHtml()}
-                    </div>
-                {/if}
-                {if $item->hasChildren()}
-                    <div
-                        class="list-group{if $item->getChildrenAttribute('class')} {$item->getChildrenAttribute('class')}{/if}">
-                        {foreach $item->getChildren() as $childItem}
-                            {if $childItem->getUri()}
-                                <a menuItemName="{$childItem->getName()}" href="{$childItem->getUri()}"
-                                    class="list-group-item list-group-item-action{if $childItem->getClass()} {$childItem->getClass()}{/if}{if $childItem->isCurrent()} active{/if}"
-                                    {if $childItem->getAttribute('dataToggleTab')} data-toggle="tab"
-                                        {/if}{if $childItem->getAttribute('target')} target="{$childItem->getAttribute('target')}" {/if}
-                                        id="{$childItem->getId()}">
-                                        {if $childItem->hasIcon()}<i class="{$childItem->getIcon()}"></i>&nbsp;{/if}
-                                        {$childItem->getLabel()|replace:"background-color":"--use-status-color"}
-                                        {if $childItem->hasBadge()}&nbsp;<span class="badge">{$childItem->getBadge()}</span>{/if}
-                                    </a>
-                                {else}
-                                    <div menuItemName="{$childItem->getName()}"
-                                        class="list-group-item list-group-item-action{if $childItem->getClass()} {$childItem->getClass()}{/if}"
-                                        id="{$childItem->getId()}">
-                                        {if $childItem->hasIcon()}<i class="{$childItem->getIcon()}"></i>&nbsp;{/if}
-                                        {$childItem->getLabel()}
-                                        {if $childItem->hasBadge()}&nbsp;<span class="badge">{$childItem->getBadge()}</span>{/if}
-                                    </div>
-                                {/if}
-                            {/foreach}
-                        </div>
-                    {/if}
-                    {if $item->hasFooterHtml()}
-                        <div class="card-footer">
-                            {$item->getFooterHtml()}
-                        </div>
-                    {/if}
-                </div>
-            {/function}
-            {foreach $panels as $item}
-                {outputHomePanels}
-            {/foreach}
-        </div>
-    </div>

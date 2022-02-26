@@ -2,12 +2,11 @@
     <nav class="navbar navbar-default" role="navigation">
 
         <ul class="nav navbar-nav">
-            <li class="fa_star {if $client === null} {else}active {/if}"><a href="https://armelin.media/home"><i
-                        class="fas fa-star"></i></a></li>
+            <li class="fa_star"><a href="https://armelin.media/home"><i class="fas fa-star"></i></a></li>
             <li><a href="https://armelin.media/creative-studio/"><span>CREATIVE</span> STUDIO</a></li>
             <li><a href="https://armelin.media/strategy-ward/"><span>STRATEGY</span> WARD</a></li>
             <li><a href="https://armelin.media/star-agency/"><span>Star</span> agency</a></li>
-            <li class="fa_cube {if $client === null}active {/if}"><a href="clientarea.php"><i
+            <li class="fa_cube {if $client === null} {else}active {/if}"><a href="clientarea.php"><i
                         class="fas fa-cube"></i></a></li>
         </ul>
     </nav>
