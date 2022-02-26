@@ -64,6 +64,7 @@
   margin-left: -7px;
   opacity: 0;
 }
+
 .integrated-header nav.navbar ul.navbar-nav li.fa_star:before,
 .integrated-header nav.navbar ul.navbar-nav li.fa_cube:before {
   bottom: -13px;
@@ -824,6 +825,16 @@
   transform: translateX(-100%);
   background-color: #000000;
 }
+.dark .p-hamburger__line-in--01:after,
+.dark .p-hamburger__line-in--01:before,
+.dark .p-hamburger__line-in--02:after,
+.dark .p-hamburger__line-in--02:before,
+.dark .p-hamburger__line-in--03:after,
+.dark .p-hamburger__line-in--03:before {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background-color: #fff;
+}
 .p-hamburger__line-in--cross01,
 .p-hamburger__line-in--cross02 {
   -webkit-transform: translateX(-33.3%);
@@ -834,6 +845,18 @@
 .p-hamburger__line-in--cross02:after,
 .p-hamburger__line-in--cross02:before {
   background-color: #fff;
+}
+.dark .p-hamburger__line-in--cross01:after,
+.dark .p-hamburger__line-in--cross01:before,
+.dark .p-hamburger__line-in--cross02:after,
+.dark .p-hamburger__line-in--cross02:before {
+  background-color: #000;
+}
+.dark .p-hamburger__line-in--cross01:after,
+.dark .p-hamburger__line-in--cross01:before,
+.dark .p-hamburger__line-in--cross02:after,
+.dark .p-hamburger__line-in--cross02:before {
+  background-color: #000;
 }
 .p-hamburger.is-mounted .p-hamburger__line {
   -webkit-transition-duration: 0.6s;
@@ -2162,7 +2185,7 @@
   flex-direction: row;
 }
 
-.page-clientareahome .integrated-header nav.navbar ul.navbar-nav li:before {
+.integrated-header nav.navbar ul.navbar-nav li:before {
   background: #ffffff;
 }
 

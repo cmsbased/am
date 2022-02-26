@@ -124,6 +124,7 @@ header.header .search { @apply border-0 }
  }
  tr.masspay-total td { @apply dark:bg-black }
  .dataTables_wrapper table.table-list > tbody > tr > td { @apply bg-white }
+ .dark .dataTables_wrapper table.table-list > tbody > tr > td { @apply bg-gray-900 }
 
 /** Forms and Form Elements **/
 #order-standard_cart .form-control, .form-control { @apply text-gray-400 placeholder-gray-400 border-gray-200 rounded-none dark:placeholder-gray-800 dark:focus:placeholder-gray-900 dark:bg-black dark:border-gray-950 bg-gray-10 focus:placeholder-gray-300; } 

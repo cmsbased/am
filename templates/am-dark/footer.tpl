@@ -1,6 +1,5 @@
                     </div>
 
-                    </div>
                     {if !$inShoppingCart && $secondarySidebar->hasChildren()}
                         <div class="d-md-none col-md-3 sidebar sidebar-secondary">
                             {include file="$template/includes/sidebar.tpl" sidebar=$secondarySidebar}
@@ -8,7 +7,9 @@
                     {/if}
                     <div class="clearfix"></div>
                     </div>
+                    </div>
                     </section>
+
 
 
                     <div id="fullpage-overlay" class="w-hidden">

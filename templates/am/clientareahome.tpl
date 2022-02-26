@@ -55,9 +55,9 @@
 <div>
     <dl class="grid grid-cols-1 gap-5 mb-10 overflow-hidden md:grid-cols-4">
         <div
-            class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
+            class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 dark:divide-gray-800 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
             <a href="{$WEB_ROOT}/clientarea.php?action=services"
-                class="text-black no-underline focus:outline-none hover:text-white">
+                class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                 <span class="absolute inset-0" aria-hidden="true"></span>
                 <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                     <div class="text-xs">
@@ -79,9 +79,9 @@
         {if $clientsstats.numdomains || $registerdomainenabled || $transferdomainenabled}
 
             <div
-                class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
+                class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
                 <a href="{$WEB_ROOT}/clientarea.php?action=domains"
-                    class="text-black no-underline focus:outline-none hover:text-white">
+                    class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                         <div class="text-xs">
@@ -103,8 +103,9 @@
         {elseif $condlinks.affiliates && $clientsstats.isAffiliate}
 
             <div
-                class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
-                <a href="{$WEB_ROOT}/affiliates.php" class="text-black no-underline focus:outline-none hover:text-white">
+                class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
+                <a href="{$WEB_ROOT}/affiliates.php"
+                    class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                         <div class="text-xs">
@@ -127,9 +128,9 @@
         {else}
 
             <div
-                class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
+                class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
                 <a href="{$WEB_ROOT}/clientarea.php?action=quotes"
-                    class="text-black no-underline focus:outline-none hover:text-white">
+                    class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                         <div class="text-xs">
@@ -151,9 +152,9 @@
         {/if}
 
         <div
-            class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
+            class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
             <a href="{$WEB_ROOT}/supporttickets.php"
-                class="text-black no-underline focus:outline-none hover:text-white">
+                class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                 <span class="absolute inset-0" aria-hidden="true"></span>
                 <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                     <div class="text-xs">
@@ -174,9 +175,9 @@
         </div>
 
         <div
-            class="relative p-5 text-black transition duration-300 ease-in-out bg-white rounded-tl-xl rounded-br-xl hover:bg-primary-600">
+            class="relative p-5 text-black transition duration-300 ease-in-out bg-white dark:text-white dark:bg-gray-900 rounded-tl-xl rounded-br-xl hover:bg-primary-600 dark:hover:bg-primary-600">
             <a href="{$WEB_ROOT}/clientarea.php?action=invoices"
-                class="text-black no-underline focus:outline-none hover:text-white">
+                class="text-black no-underline dark:text-white focus:outline-none hover:text-white">
                 <span class="absolute inset-0" aria-hidden="true"></span>
                 <dd class="flex items-center justify-between pb-0 mb-0 md:block lg:flex">
                     <div class="text-xs">
@@ -209,7 +210,7 @@
 
 
 <div class="grid grid-cols-1 gap-8 mb-10 xl:grid-cols-2 2xl:grid-cols-3">
-    <div class="relative col-span-2 px-10 py-5 bg-white shadow-lg rounded-tl-xl rounded-br-xl">
+    <div class="relative col-span-2 px-10 py-5 bg-white shadow-lg dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
         <h4 class="text-base font-bold tracking-widest uppercase nav-billing">{$LANG.navbilling}</h4>
         <div class="grid grid-cols-1 gap-20 xl:grid-cols-2">
             <div class="flex items-center justify-between mt-5 md:block lg:flex">
@@ -236,7 +237,7 @@
         </div>
     </div>
 
-    <div class="relative px-10 py-5 bg-white shadow-lg rounded-tl-xl rounded-br-xl">
+    <div class="relative px-10 py-5 bg-white shadow-lg dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
         <h4 class="text-base font-bold tracking-widest uppercase account-info">{$LANG.accountinfo}</h4>
         <div class="py-5">
             {$clientsdetails.firstname} {$clientsdetails.lastname}<br />
@@ -250,7 +251,7 @@
 </div>
 
 <div class="grid grid-cols-1 gap-8 mb-10 xl:grid-cols-2 2xl:grid-cols-3">
-    <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl rounded-tl-xl rounded-br-xl">
+    <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
         <h3 class="page-header-2"><span aria-hidden="true" class="icon icon-drawer"></span> <span
                 class="text-lg header-text">{$clientsstats.numdueinvoices} {$LANG.invoicesdue}</span></h3>
         <form method="post" action="{$WEB_ROOT}/clientarea.php?action=masspay">
@@ -342,7 +343,7 @@
 
 
 <div class="grid grid-cols-1 gap-8 mb-10 xl:grid-cols-2 2xl:grid-cols-3">
-    <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl rounded-tl-xl rounded-br-xl">
+    <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
         <h3 class="page-header-2"><span aria-hidden="true" class="icon icon-support"></span><span
                 class="text-lg header-text">{$clientsstats.numactivetickets}
                 {$LANG.supportticketsopentickets|replace:'Open Support Tickets':'Tickets'}</span></h3>

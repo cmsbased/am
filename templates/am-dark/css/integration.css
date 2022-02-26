@@ -24,7 +24,6 @@
 .integrated-header nav.navbar {
   width: 100%;
   min-height: initial;
-  display: inline-block;
   background: #010101;
   border-radius: 0;
   border: none !important;
@@ -65,9 +64,7 @@
   margin-left: -7px;
   opacity: 0;
 }
-.dark .integrated-header nav.navbar ul.navbar-nav li:before {
-  background: rgb(0, 0, 0);
-}
+
 .integrated-header nav.navbar ul.navbar-nav li.fa_star:before,
 .integrated-header nav.navbar ul.navbar-nav li.fa_cube:before {
   bottom: -13px;
@@ -2180,4 +2177,38 @@
   .integrated-header header {
     padding: 10px 0 0;
   }
+}
+
+/** Misc **/
+
+.integrated-header header .toolbar {
+  flex-direction: row;
+}
+
+.integrated-header nav.navbar ul.navbar-nav li:before {
+  background: #ffffff;
+}
+
+h4.account-info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 14px;
+  height: 26px;
+  background: #bc2582;
+}
+
+h4.nav-billing:before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 26px;
+  height: 14px;
+  background: #bc2582;
+}
+
+.page-login section#main-body {
+  padding-top: 0px !important;
 }

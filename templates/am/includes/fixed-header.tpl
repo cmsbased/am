@@ -65,7 +65,7 @@
                 {/if}
                 <li class="ml-3 xl:ml-6 nav-item">
                     {$link_back="systpl=`$template`&amp;"}
-                    <a href="{$currentpagelinkback|replace:$link_back:''}systpl=twenty-one-plus-dark"
+                    <a href="{$currentpagelinkback|replace:$link_back:''}systpl=am-dark"
                         class="flex items-center p-2 -m-2 text-black rounded-full group hover:text-gray-500 focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="flex-shrink-0 w-5 h-5 text-black group-hover:text-gray-500" fill="none"
