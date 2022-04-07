@@ -4,6 +4,11 @@
     $(document).ready(function() {
         $('#myInvoices')
             .DataTable({
+                pageLength: 5,
+                lengthMenu: [
+                    [5, 10, 20, -1],
+                    [5, 10, 20, 'Todos']
+                ],
                 "responsive": true,
                 "dom": '<"listtable"fit>pl',
                 "lengthChange": false,
@@ -15,17 +20,20 @@
                         0
                     ]
                 }],
-                "stateSave": true,
                 "info": false
             });
         $('#mySupport')
             .DataTable({
+                pageLength: 5,
+                lengthMenu: [
+                    [5, 10, 20, -1],
+                    [5, 10, 20, 'Todos']
+                ],
                 "responsive": true,
                 "dom": '<"listtable"fit>pl',
                 "lengthChange": false,
                 "filter": false,
                 "sort": true,
-                "stateSave": true,
                 "info": false
             });
         $(
@@ -341,6 +349,18 @@
     </div>
 </div>
 
+<div class="grid grid-cols-1 gap-8 mb-10 xl:grid-cols-2 2xl:grid-cols-3">
+    <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
+        {foreach $panels as $item}
+            {if in_array($item->getName(), $flattern_enabled_panels) && $item->getName()=='pm-addon'}
+                {include file="$template/includes/outputHomePanels_projects.tpl"}
+            {/if}
+            {if in_array($item->getName(),$flattern_enabled_panels) && $item->getName()=='Your Files'}
+                {include file="$template/includes/outputHomePanels_files.tpl"}
+            {/if}
+        {/foreach}
+    </div>
+</div>
 
 <div class="grid grid-cols-1 gap-8 mb-10 xl:grid-cols-2 2xl:grid-cols-3">
     <div class="relative col-span-3 px-10 py-5 bg-white shadow-xl dark:bg-gray-900 rounded-tl-xl rounded-br-xl">
